@@ -1,8 +1,7 @@
 import fetchWeather from "./modules/fetch-weather";
-import processWeatherData from "./modules/display-weather";
-import loadForm from "./modules/form/form";
-
-loadForm()
+import processWeatherData from "./modules/process-weather-data.js";
+import displayWeather from "./modules/display-weather.js"
+import displayError from "./modules/display-error.js"
 
 const form = document.querySelector(".location-form")
 form.addEventListener("submit", (event) => {
@@ -11,6 +10,10 @@ form.addEventListener("submit", (event) => {
 })
 
 async function main(location) {
-    const data = await fetchWeather(location)
-    processWeatherData(data)
+    try {
+        const data = await fetchWeather(location)
+        const temperature = processWeatherData(data)
+        displayWeather(location, temperature)
+    } catch {
+    }
 }

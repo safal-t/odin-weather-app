@@ -15,6 +15,11 @@ export default {
         path: path.resolve(process.cwd(), "dist"),
         filename: "bundle.js"
     },
-    plugins: [new HtmlWebpackPlugin()],
-    mode: "production",
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/template.html', // Use your HTML template
+            filename: 'index.html' // Output filename in dist/
+        })
+    ],
+    mode: "development",
 };
