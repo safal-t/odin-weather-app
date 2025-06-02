@@ -3,9 +3,11 @@ const displayError = function (string) {
     h1.className = 'error';
     h1.textContent = string;
     const weatherInfoDiv = document.querySelector('.weather-info');
+    weatherInfoDiv.innerHTML = ""
     if (weatherInfoDiv) {
         weatherInfoDiv.appendChild(h1);
     }
+
 }
 
 export default displayError;

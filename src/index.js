@@ -7,6 +7,7 @@ const form = document.querySelector(".location-form")
 form.addEventListener("submit", (event) => {
     event.preventDefault()
     main(form.location.value)
+    form.reset()
 })
 
 async function main(location) {
