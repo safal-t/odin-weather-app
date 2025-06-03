@@ -14,4 +14,27 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  padding: 1%;
+  text-align: center;
+  color: hsla(0, 14%, 92%, 0.935);
+}
+
+form input {
+  padding: 1%;
+  border-radius: 50px;
+  opacity: 80%;
+  margin-bottom: 80px;
+}
+
+.location-header {
+  font-size: 3rem;
+}
+
+.location-weather {
+  font-size: 4rem;
+}
+
+.feels-like {
+  font-size: 2rem;
+  color: hsla(0, 17%, 95%, 0.797);
 }

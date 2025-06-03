@@ -1,6 +1,10 @@
 function processWeatherData(data) {
     const currentTemp = data.currentConditions.temp
-    return `${currentTemp}°C`
+    const feelsLike = data.currentConditions.feelslike
+    return {
+        currentTemp: currentTemp,
+        feelsLike: feelsLike
+    }
 }
 
 export default processWeatherData

@@ -13,8 +13,10 @@ form.addEventListener("submit", (event) => {
 async function main(location) {
     try {
         const data = await fetchWeather(location)
-        const temperature = processWeatherData(data)
-        displayWeather(location, temperature)
+        const processedData = processWeatherData(data)
+        const temperature = processedData.currentTemp
+        const feelsLike = processedData.feelsLike
+        displayWeather(location, temperature, feelsLike)
     } catch {
     }
 }

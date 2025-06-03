@@ -1,18 +1,22 @@
-const displayWeather = function (location, temperature) {
+const displayWeather = function (location, temperature, feelsLike) {
     const weatherInfoDiv = document.querySelector('.weather-info');
     if (!weatherInfoDiv) return;
 
     weatherInfoDiv.innerHTML = "";
 
-    const h1 = document.createElement("h1");
-    h1.classList.add("location-header");
-    h1.innerText = location.charAt(0).toUpperCase() + location.slice(1).toLowerCase();
+    const locationHeader = document.createElement("h2");
+    locationHeader.classList.add("location-header");
+    locationHeader.innerText = location.charAt(0).toUpperCase() + location.slice(1).toLowerCase();
 
-    const h2 = document.createElement("h2");
-    h2.classList.add("location-weather");
-    h2.innerText = temperature;
+    const temperatureHeader = document.createElement("h1");
+    temperatureHeader.classList.add("location-weather");
+    temperatureHeader.innerText = `${temperature}°C`;
 
-    weatherInfoDiv.append(h1, h2);
+    const feelsLikeHeader = document.createElement("h3");
+    feelsLikeHeader.classList.add("feels-like");
+    feelsLikeHeader.innerText = `Feels Like: ${feelsLike}°`;
+
+    weatherInfoDiv.append(locationHeader, temperatureHeader, feelsLikeHeader);
 }
 
 export default displayWeather;
