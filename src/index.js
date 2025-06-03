@@ -1,7 +1,7 @@
 import fetchWeather from "./modules/fetch-weather";
 import processWeatherData from "./modules/process-weather-data.js";
 import displayWeather from "./modules/display-weather.js"
-import displayError from "./modules/display-error.js"
+import "./index.css"
 
 const form = document.querySelector(".location-form")
 form.addEventListener("submit", (event) => {
