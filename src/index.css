@@ -20,9 +20,9 @@ body {
 }
 
 form input {
-  padding: 1%;
+  padding: 0.5%;
   border-radius: 50px;
-  opacity: 80%;
+  opacity: 75%;
   margin-bottom: 80px;
 }
 
